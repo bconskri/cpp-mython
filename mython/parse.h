@@ -4,15 +4,15 @@
 #include <stdexcept>
 
 namespace parse {
-class Lexer;
+    class Lexer;
 }
 
 namespace runtime {
-class Executable;
+    class Executable;
 }
 
 struct ParseError : std::runtime_error {
     using std::runtime_error::runtime_error;
 };
 
-std::unique_ptr<runtime::Executable> ParseProgram(parse::Lexer& lexer);
+std::unique_ptr<runtime::Executable> ParseProgram(parse::Lexer &lexer);
